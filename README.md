@@ -61,6 +61,10 @@ go.py script.conf
 1. Invoke the automaticJobCreation.sh giving two parameters
   1. Full name of dataset, e.g. /ttHTobb_M125_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8/RunIISpring16MiniAODv2-premix_withHLT_80X_mcRun2_asymptotic_v14-v1/MINIAODSIM
   1. Short name of sample, e.g. ttHTobb_M125_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8"
+  
+  ```
+  ./automaticJobCreation.sh /ttHTobb_M125_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8/RunIISpring16MiniAODv2-premix_withHLT_80X_mcRun2_asymptotic_v14-v1/MINIAODSIM ttHTobb_M125_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8
+  ```
 1. Check the generated config file which has the sample name as a basename.conf
 1. Run config with grid-control via
   
