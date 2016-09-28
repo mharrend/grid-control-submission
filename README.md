@@ -49,6 +49,24 @@ go.py script.conf
 ```
 3. Check Gui output
 
+## Example grid-control config files
+
+#### Config-CMSSWJobs-Freiburg-GridkaStore.conf
+* Own CMSSW installation will be used together with a CMSSW config
+* Jobs will be run at bwUniCluster in Freiburg
+* Jobs will be stored at Gridka NRG storage (needs dcms proxy)
+
+## Automatic generation of grid-control config files
+1. Edit the automaticJobCreation_draft.conf file according to your needs, while keeping the #DATASETNAME# and #SAMPLENAME# part.
+1. Invoke the automaticJobCreation.sh giving two parameters
+  1. Full name of dataset, e.g. /ttHTobb_M125_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8/RunIISpring16MiniAODv2-premix_withHLT_80X_mcRun2_asymptotic_v14-v1/MINIAODSIM
+  1. Short name of sample, e.g. ttHTobb_M125_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8"
+1. Check the generated config file which has the sample name as a basename.conf
+1. Run config with grid-control via
+  
+  ```
+  go.py [config file]
+  ```
 
 
 
