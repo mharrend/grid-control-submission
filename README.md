@@ -4,13 +4,13 @@ Submission via grid-control on bwUniCluster and store on Gridka
 ## Installation of necessary software
 1. Log into ekpcms6 and make sure that you are using the bash (e.g. zsh does not work)
 2. Install grid-control in a folder, e.g. /usr/users via
-```
+  ```
 svn co https://ekptrac.physik.uni-karlsruhe.de/svn/grid-control/trunk/grid-control
-```
+  ```
 3. Source the proper grid environment 
-```
+  ```
 source /cvmfs/grid.cern.ch/emi3ui-latest/etc/profile.d/setup-ui-example.sh
-```
+  ```
 4. Create a dcms voms proxy and manually export the path to the proxy. During the creation of the proxy its path will be shown
 ```
 voms-proxy-init --voms cms:/cms/dcms --valid 192:00
