@@ -4,6 +4,7 @@ Submission via grid-control on bwUniCluster and store on Gridka
 ## Installation of necessary software
 1. Log into ekpcms6 and make sure that you are using the bash (e.g. zsh does not work)
 2. Install grid-control in a folder, e.g. /usr/users via
+
   ```
 svn co https://ekptrac.physik.uni-karlsruhe.de/svn/grid-control/trunk/grid-control
   ```
