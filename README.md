@@ -8,7 +8,7 @@ Submission via grid-control on bwUniCluster and store on Gridka
   ```
 svn co https://ekptrac.physik.uni-karlsruhe.de/svn/grid-control/trunk/grid-control
   ```
-3. Source the proper grid environment 
+3. Source the proper grid environment
 
   ```
 source /cvmfs/grid.cern.ch/emi3ui-latest/etc/profile.d/setup-ui-example.sh
@@ -43,7 +43,7 @@ export X509_USER_PROXY=/tmp/x509up_u12117
 export PATH=$PATH:/usr/users/harrendorf/grid-control:/usr/users/harrendorf/grid-control/scripts
 ```
 2. Invoke grid-control using a prepared config script
-  
+
   ```
 go.py script.conf
 ```
@@ -56,21 +56,35 @@ go.py script.conf
 * Jobs will be run at bwUniCluster in Freiburg
 * Jobs will be stored at Gridka NRG storage (needs dcms proxy)
 
+#### Config-CMSSWJobs-Freiburg-localStore.conf
+* Own CMSSW installation will be used together with a CMSSW config
+* Jobs will be run at bwUniCluster in Freiburg
+* Jobs will be stored locally at EKCMS6 storage
+
+#### Config-CMSSWJobs-EKPCMS6-localStore.conf
+* Own CMSSW installation will be used together with a CMSSW config
+* Jobs will be run locally at EKP-Cluster
+* Jobs will be stored locally locally at EKCMS6 storage
+
+#### Config-CMSSWJobs-NAF-localStore.conf
+* Own CMSSW installation will be used together with a CMSSW config
+* Jobs will be run locally at NAF
+* Jobs will be stored locally at /nfs/dust/cms/user/<user>
+
+
+
 ## Automatic generation of grid-control config files
 1. Edit the automaticJobCreation_draft.conf file according to your needs, while keeping the #DATASETNAME# and #SAMPLENAME# part.
 1. Invoke the automaticJobCreation.sh giving two parameters
   1. Full name of dataset, e.g. /ttHTobb_M125_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8/RunIISpring16MiniAODv2-premix_withHLT_80X_mcRun2_asymptotic_v14-v1/MINIAODSIM
   1. Short name of sample, e.g. ttHTobb_M125_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8"
-  
+
   ```
   ./automaticJobCreation.sh /ttHTobb_M125_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8/RunIISpring16MiniAODv2-premix_withHLT_80X_mcRun2_asymptotic_v14-v1/MINIAODSIM ttHTobb_M125_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8
   ```
 1. Check the generated config file which has the sample name as a basename.conf
 1. Run config with grid-control via
-  
+
   ```
   go.py [config file]
   ```
-
-
-
